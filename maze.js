@@ -1,9 +1,9 @@
 
-
 window.onload= function() {
     var booundary = document.getElementsByClassName("boundary");
     var winner = true;
     var end = document.getElementById("end");
+    var restart = document.getElementById("start");
     
     for (var i = 0; i < booundary.length-1; i++){
      booundary[i].addEventListener("mouseover",function(){
@@ -23,10 +23,17 @@ window.onload= function() {
         }
     });
     
+    restart.addEventListener("click", function(){
+        for(var y = 0; y < booundary.length-1; y++){
+            for(var z = 0; 0<booundary.length-1;z++){
+                winner = true;
+                booundary[z].className += "boundary";
+            }
+        }
+    });
 
     
  };
     
     
-
 
